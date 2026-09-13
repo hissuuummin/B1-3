@@ -5,11 +5,11 @@
 | 파일 | 내용 |
 |---|---|
 | `01-n8n-workflow.png` | n8n 워크플로우 구성 + 실행 결과. 노드별 초록 체크와 `1 item` 처리 건수, `Filter1` 경로의 회색 연결선(0건)이 함께 보입니다. |
-| `03-make-scenario.png` | Make 시나리오 전체 구성. Router의 두 경로에 `기준가 이상` · `기준가 미만` 라벨이 붙어 있습니다. |
-| `04-make-filter-above.png` | Make 라우터 필터 — 기준가 이상 (`Greater than or equal to`, `100000000`) |
-| `05-make-filter-below.png` | Make 라우터 필터 — 기준가 미만 (`Less than`, `100000000`) |
-| `07-kakao-breakout.png` | 카카오톡 수신 — 돌파 알림 (기준가 100,000,000원) |
-| `08-kakao-waiting.png` | 카카오톡 수신 — 대기 알림 (기준가 120,000,000원) |
-| `09-kakao-all.jpg` | 카카오톡 전체 대화. 문구를 개선해 온 이력이 함께 남아 있습니다. |
+| `02-make-scenario.png` | Make 시나리오 전체 구성. Router의 두 경로에 `기준가 이상` · `기준가 미만` 라벨이 붙어 있습니다. |
+| `03-make-filter-above.png` | Make 라우터 필터 — 기준가 이상 (`Greater than or equal to`, `100000000`) |
+| `04-make-filter-below.png` | Make 라우터 필터 — 기준가 미만 (`Less than`, `100000000`) |
+| `05-kakao-breakout.png` | 카카오톡 수신 — 돌파 알림 (기준가 100,000,000원) |
+| `06-kakao-waiting.png` | 카카오톡 수신 — 대기 알림 (기준가 120,000,000원) |
+| `07-kakao-all.jpg` | 카카오톡 전체 대화. 문구를 개선해 온 이력이 함께 남아 있습니다. |
 
-`07`과 `08`은 `09`에서 해당 메시지만 잘라낸 것입니다.
+`05`와 `06`은 `07`에서 해당 메시지만 잘라낸 것입니다.

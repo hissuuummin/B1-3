@@ -151,7 +151,7 @@ n8n은 **표현식 자체가 JavaScript**이기 때문에, 조건 분기와 문�
 
 ### 2.3 Make 구현
 
-![Make 시나리오](images/03-make-scenario.png)
+![Make 시나리오](images/02-make-scenario.png)
 
 | 순서 | 모듈 | 역할 |
 |---|---|---|
@@ -183,9 +183,9 @@ template_object = {"object_type":"text","text":"<생성된 문구>","link":{"web
 
 **조건 분기 설정**
 
-![Make 필터 — 기준가 이상](images/04-make-filter-above.png)
+![Make 필터 — 기준가 이상](images/03-make-filter-above.png)
 
-![Make 필터 — 기준가 미만](images/05-make-filter-below.png)
+![Make 필터 — 기준가 미만](images/04-make-filter-below.png)
 
 조건식을 문자열로 쓰지 않고 **값 · 연산자 · 기준값을 각각 선택**합니다(`Greater than or equal to` / `Less than`). 기준가를 바꿀 때는 이 두 곳만 고치면 되고, 값이 숫자 타입으로 고정되어 비교 오류가 생기지 않습니다.
 
@@ -313,17 +313,17 @@ flowchart TD
 
 **카카오톡 수신 — 돌파 알림 (기준가 이상)**
 
-![카카오톡 수신 — 돌파 알림](images/07-kakao-breakout.png)
+![카카오톡 수신 — 돌파 알림](images/05-kakao-breakout.png)
 
 **카카오톡 수신 — 대기 알림 (기준가 미만)**
 
-![카카오톡 수신 — 대기 알림](images/08-kakao-waiting.png)
+![카카오톡 수신 — 대기 알림](images/06-kakao-waiting.png)
 
 > 📌 검증 시점에 실제 시세가 1억 원을 넘어 있어 미만 경로가 자연 발생하지 않았습니다. 시세는 임의로 바꿀 수 없으므로 **판정 기준가를 일시적으로 1억 2천만 원으로 올려** 미만 경로를 통과시킨 뒤 원래 값(1억 원)으로 되돌렸습니다. 조건식이 아니라 입력값만 바꾼 검증입니다.
 
 두 캡처의 `기준가` 줄이 각각 `120,000,000원`과 `100,000,000원`으로 다른 것이 이 검증 과정을 그대로 보여줍니다. 문구가 기준가를 **고정 문자열이 아니라 설정값으로 출력**하기 때문에, 기준가를 얼마로 바꾸든 메시지와 판정 결과가 어긋나지 않습니다.
 
-전체 대화 흐름은 [`images/09-kakao-all.jpg`](images/09-kakao-all.jpg)에서 볼 수 있습니다. 위쪽 12:18·12:19 두 건은 문구를 개선하기 전 버전으로, 기준가 줄이 없고 "1억"이 고정 문자열로 박혀 있던 단계의 기록입니다.
+전체 대화 흐름은 [`images/07-kakao-all.jpg`](images/07-kakao-all.jpg)에서 볼 수 있습니다. 위쪽 12:18·12:19 두 건은 문구를 개선하기 전 버전으로, 기준가 줄이 없고 "1억"이 고정 문자열로 박혀 있던 단계의 기록입니다.
 
 > ⏱️ **스케줄 상태** — 실행 주기는 15분으로 설정되어 있으며, 아래 2.7절의 무료 한도 계산에 따라 검증 완료 후 토글을 내려 둔 상태입니다. 시연 시 토글만 켜면 즉시 자동 실행됩니다.
 
@@ -339,7 +339,7 @@ flowchart TD
 | Trigger 1개 이상 | ✅ | n8n: 수동 실행 / Make: 15분 스케줄 |
 | Action 2개 이상 | ✅ | API 조회 + 문구 생성 + 메시지 전송 (3개 이상) |
 | 조건 분기 1개 이상 | ✅ | n8n: Filter 2개 / Make: Router + 경로별 필터 |
-| 각 분기 경로 1회 이상 실행 결과 확인 | ✅ | 기준가를 조정해 두 경로를 각각 실행, 카카오톡 수신으로 확인 (`images/07`, `images/08`) |
+| 각 분기 경로 1회 이상 실행 결과 확인 | ✅ | 기준가를 조정해 두 경로를 각각 실행, 카카오톡 수신으로 확인 (`images/05`, `images/06`) |
 
 ### 프로젝트 1
 
@@ -452,9 +452,9 @@ Make 입력 필드는 슬래시를 입력하면 함수 검색 모드로 전환�
 | 파일 | 내용 |
 |---|---|
 | `images/01-n8n-workflow.png` | n8n 워크플로우 구성 + 실행 결과 (노드별 처리 건수 표시) |
-| `images/03-make-scenario.png` | Make 시나리오 전체 구성 |
-| `images/04-make-filter-above.png` | Make 라우터 필터 — 기준가 이상 |
-| `images/05-make-filter-below.png` | Make 라우터 필터 — 기준가 미만 |
-| `images/07-kakao-breakout.png` | 카카오톡 수신 — 돌파 알림 |
-| `images/08-kakao-waiting.png` | 카카오톡 수신 — 대기 알림 |
-| `images/09-kakao-all.jpg` | 카카오톡 전체 대화 (문구 개선 이력 포함) |
+| `images/02-make-scenario.png` | Make 시나리오 전체 구성 |
+| `images/03-make-filter-above.png` | Make 라우터 필터 — 기준가 이상 |
+| `images/04-make-filter-below.png` | Make 라우터 필터 — 기준가 미만 |
+| `images/05-kakao-breakout.png` | 카카오톡 수신 — 돌파 알림 |
+| `images/06-kakao-waiting.png` | 카카오톡 수신 — 대기 알림 |
+| `images/07-kakao-all.jpg` | 카카오톡 전체 대화 (문구 개선 이력 포함) |
