@@ -1,20 +1,15 @@
-# 스크린샷 폴더
+# 스크린샷
 
-아래 파일명 그대로 이 폴더에 넣으면 README에 자동으로 표시됩니다.
+과제 산출물 증빙 캡처입니다. 모든 이미지는 API 키·토큰·계정 정보가 노출되지 않도록 확인했습니다.
 
-| 파일명 | 캡처할 화면 |
+| 파일 | 내용 |
 |---|---|
-| `01-n8n-workflow.png` | n8n 워크플로우 전체 캔버스 |
-| `02-n8n-execution.png` | n8n 실행 성공 화면 (노드에 체크 표시) |
-| `03-make-scenario.png` | Make 시나리오 전체 (라우터 2경로 보이게) |
-| `04-make-execution.png` | Make 실행 결과 — 1st/2nd 경로 모두 성공 |
-| `05-make-history.png` | Make History 탭 실행 로그 |
-| `06-make-schedule-on.png` | Make 하단 스케줄 토글 ON + Every 15 minutes |
-| `07-kakao-breakout.png` | 카카오톡 수신 — 돌파 알림 |
-| `08-kakao-waiting.png` | 카카오톡 수신 — 대기 알림 |
+| `01-n8n-workflow.png` | n8n 워크플로우 구성 + 실행 결과. 노드별 초록 체크와 `1 item` 처리 건수, `Filter1` 경로의 회색 연결선(0건)이 함께 보입니다. |
+| `03-make-scenario.png` | Make 시나리오 전체 구성. Router의 두 경로에 `기준가 이상` · `기준가 미만` 라벨이 붙어 있습니다. |
+| `04-make-filter-above.png` | Make 라우터 필터 — 기준가 이상 (`Greater than or equal to`, `100000000`) |
+| `05-make-filter-below.png` | Make 라우터 필터 — 기준가 미만 (`Less than`, `100000000`) |
+| `07-kakao-breakout.png` | 카카오톡 수신 — 돌파 알림 (기준가 100,000,000원) |
+| `08-kakao-waiting.png` | 카카오톡 수신 — 대기 알림 (기준가 120,000,000원) |
+| `09-kakao-all.jpg` | 카카오톡 전체 대화. 문구를 개선해 온 이력이 함께 남아 있습니다. |
 
-## 캡처 시 주의
-
-- 카카오 access token이 보이는 화면(HTTP 모듈 Headers)은 **토큰 부분을 가려주세요**.
-- 카카오톡 캡처는 **이름·프로필·전화번호**를 가려주세요.
-- Make URL의 조직 ID, n8n 인스턴스 주소도 가리는 편이 안전합니다.
+`07`과 `08`은 `09`에서 해당 메시지만 잘라낸 것입니다.
